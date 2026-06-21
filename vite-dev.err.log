@@ -1,0 +1,28 @@
+[2m2:19:44 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "bootstrap/dist/css/bootstrap.min.css" from "src/main.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/myprotfolio/src/main.jsx[39m:3:7
+[33m  1  |  import React from "react";
+  2  |  import { createRoot } from "react-dom/client";
+  3  |  import "bootstrap/dist/css/bootstrap.min.css";
+     |          ^
+  4  |  import App from "./App.jsx";
+  5  |  import "./index.css";[39m
+[2m2:19:45 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "bootstrap/dist/css/bootstrap.min.css" from "src/main.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/myprotfolio/src/main.jsx[39m:3:7
+[33m  1  |  import React from "react";
+  2  |  import { createRoot } from "react-dom/client";
+  3  |  import "bootstrap/dist/css/bootstrap.min.css";
+     |          ^
+  4  |  import App from "./App.jsx";
+  5  |  import "./index.css";[39m
+      at TransformPluginContext._formatLog (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///E:/myprotfolio/node_modules/vite/dist/node/chunks/config.js:24562:20)
