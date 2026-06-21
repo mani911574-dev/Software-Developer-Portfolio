@@ -2,6 +2,17 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionTemplate, useScroll, useSpring, useTransform } from "framer-motion";
 import finalCv from "./assets/finalcv.pdf";
 import portfolioPhoto from "./assets/portfolio.jpg";
+import cropDisease1 from "./Images/cropdisease.jpeg";
+import cropDisease2 from "./Images/cropdisease2.jpeg";
+import cropDisease3 from "./Images/cropdisaese3.jpeg";
+import cropDisease4 from "./Images/cropdisease4.jpeg";
+import cropDisease5 from "./Images/Cropdisease5.jpeg";
+import disaster1 from "./Images/d1.png";
+import disaster2 from "./Images/d2.png";
+import disaster3 from "./Images/d3.png";
+import solarHome from "./Images/solarhome.png";
+import solar2 from "./Images/s2.png";
+import solar3 from "./Images/s3.png";
 import {
   ArrowDown,
   ArrowRight,
@@ -47,42 +58,53 @@ const projects = [
     category: "AI Mobile App",
     description: "React Native application using machine learning and Hugging Face to detect plant diseases from crop leaf images.",
     preview: "Users capture or upload a crop image, the AI model analyzes disease patterns, and the app returns a diagnosis-style result with guidance.",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=85",
-    screenshots: [
-      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1200&q=85",
-    ],
+    image: cropDisease1,
+    screenshots: [cropDisease1, cropDisease2, cropDisease3, cropDisease4, cropDisease5],
     stack: ["React Native", "Machine Learning", "Hugging Face", "Python"],
+    links: [
+      { label: "GitHub Repo", href: "https://github.com/mani911574-dev/Crop-Disaese-Detection-Mobile-App-Expo-Go", type: "github" },
+      { label: "Hugging Face", href: "https://huggingface.co/spaces/KlausX9/riceapi", type: "external" },
+    ],
   },
   {
     title: "Disaster Detection Using AI Model",
     category: "Computer Vision",
     description: "AI monitoring concept for identifying disaster signals from visual data and supporting fast response decisions.",
     preview: "The preview dashboard shows incoming visual signals, model confidence, emergency level, and response status.",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
-    screenshots: [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=1200&q=85",
-    ],
+    image: disaster1,
+    screenshots: [disaster1, disaster2, disaster3],
     stack: ["AI Model", "Python", "React.js", "Computer Vision"],
+    links: [
+      { label: "GitHub Repo", href: "https://github.com/mani911574-dev/Disaster-Detection-AI", type: "github" },
+    ],
   },
   {
     title: "Solar Panel Defect Detection",
     category: "Inspection AI",
     description: "AI defect detection system for solar panels that identifies cracks, dirt, hot spots, and damaged areas.",
     preview: "A technical inspection interface highlights defect regions, confidence scores, and maintenance priority.",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85",
-    screenshots: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85",
-    ],
+    image: solarHome,
+    screenshots: [solarHome, solar2, solar3],
     stack: ["Machine Learning", "Computer Vision", "Python", "React"],
+    links: [
+      { label: "Hugging Face", href: "https://huggingface.co/spaces/Remus0777/solardefect", type: "external" },
+    ],
+  },
+  {
+    title: "Professional Inventory Management Website",
+    category: "Full Stack Website",
+    description: "Professional inventory management website for product tracking, stock operations, and business workflow management.",
+    preview: "The website focuses on inventory records, management actions, and a clean business interface for daily operations.",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=85",
+    screenshots: [
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
+    ],
+    stack: ["React", "Full Stack", "Dashboard", "Inventory"],
+    links: [
+      { label: "GitHub Repo", href: "https://github.com/mani911574-dev/Inventory-Managment-Wesbite", type: "github" },
+    ],
   },
   {
     title: "Machine Learning Prediction Model",
@@ -97,6 +119,7 @@ const projects = [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85",
     ],
     stack: ["Python", "Google Colab", "Scikit-learn", "Pandas"],
+    links: [{ label: "GitHub Profile", href: githubUrl, type: "github" }],
   },
   {
     title: "AI Chat Application",
@@ -111,6 +134,7 @@ const projects = [
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=85",
     ],
     stack: ["React", "Node.js", "AI Integration", "MongoDB"],
+    links: [{ label: "GitHub Profile", href: githubUrl, type: "github" }],
   },
   {
     title: "Real-Time Chat App",
@@ -125,6 +149,7 @@ const projects = [
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=85",
     ],
     stack: ["Socket.io", "React", "Node.js", "Firebase"],
+    links: [{ label: "GitHub Profile", href: githubUrl, type: "github" }],
   },
 ];
 
@@ -467,6 +492,7 @@ function About() {
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
 
   return (
     <section id="projects" className="bg-purple-50/55 px-4 py-24 text-zinc-950 sm:px-6 lg:px-8">
@@ -497,7 +523,7 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full bg-zinc-950 object-contain transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/70 via-purple-950/15 to-transparent" />
                 <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-black text-purple-700 shadow-sm">
@@ -563,7 +589,18 @@ function Projects() {
               >
                 <X />
               </button>
-              <img src={selectedProject.image} alt="" className="h-[24rem] w-full object-cover" />
+              <button
+                type="button"
+                aria-label={`Open ${selectedProject.title} main image`}
+                onClick={() => setPreviewImage({ src: selectedProject.image, alt: `${selectedProject.title} preview` })}
+                className="block w-full cursor-zoom-in bg-zinc-950"
+              >
+                <img
+                  src={selectedProject.image}
+                  alt=""
+                  className="mx-auto h-[28rem] max-h-[70vh] w-full object-contain p-3 sm:h-[34rem]"
+                />
+              </button>
               <div className="grid gap-6 p-6 md:grid-cols-[1.2fr_0.8fr] md:p-8">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-mint">{selectedProject.category}</p>
@@ -571,12 +608,19 @@ function Projects() {
                   <p className="mt-5 leading-8 text-zinc-600">{selectedProject.preview}</p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {selectedProject.screenshots.map((screenshot, index) => (
-                      <img
+                      <button
                         key={screenshot}
-                        src={screenshot}
-                        alt={`${selectedProject.title} screenshot ${index + 1}`}
-                        className="h-36 w-full rounded-2xl object-cover"
-                      />
+                        type="button"
+                        aria-label={`Open ${selectedProject.title} screenshot ${index + 1}`}
+                        onClick={() => setPreviewImage({ src: screenshot, alt: `${selectedProject.title} screenshot ${index + 1}` })}
+                        className="overflow-hidden rounded-2xl bg-zinc-950 p-2 outline-none ring-mint/40 transition hover:-translate-y-1 hover:ring-4 focus-visible:ring-4"
+                      >
+                        <img
+                          src={screenshot}
+                          alt={`${selectedProject.title} screenshot ${index + 1}`}
+                          className="h-56 w-full cursor-zoom-in object-contain sm:h-64"
+                        />
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -592,19 +636,58 @@ function Projects() {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-mint px-5 font-black text-white"
-                  >
-                    <Github size={18} />
-                    GitHub Profile
-                    <ExternalLink size={16} />
-                  </a>
+                  <div className="mt-6 grid gap-3">
+                    {selectedProject.links.map((link) => {
+                      const LinkIcon = link.type === "github" ? Github : ExternalLink;
+
+                      return (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-mint px-5 font-black text-white"
+                        >
+                          <LinkIcon size={18} />
+                          {link.label}
+                          <ExternalLink size={16} />
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {previewImage && (
+          <motion.div
+            className="fixed inset-0 z-[110] grid place-items-center bg-zinc-950/90 px-4 py-8 backdrop-blur-md"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPreviewImage(null)}
+          >
+            <button
+              type="button"
+              aria-label="Close image preview"
+              onClick={() => setPreviewImage(null)}
+              className="absolute right-5 top-5 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur"
+            >
+              <X />
+            </button>
+            <motion.img
+              src={previewImage.src}
+              alt={previewImage.alt}
+              className="max-h-[88vh] w-full max-w-6xl rounded-2xl object-contain shadow-panel"
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              onClick={(event) => event.stopPropagation()}
+            />
           </motion.div>
         )}
       </AnimatePresence>
