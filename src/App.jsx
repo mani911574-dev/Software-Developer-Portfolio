@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionTemplate, useScroll, useSpring, useTransform } from "framer-motion";
 import finalCv from "./assets/finalcv.pdf";
-import portfolioPhoto from "./assets/portfolio.jpg";
+import portfolioPhoto from "./assets/newimage.png";
 import cropDisease1 from "./Images/cropdisease.jpeg";
 import cropDisease2 from "./Images/cropdisease2.jpeg";
 import cropDisease3 from "./Images/cropdisaese3.jpeg";
