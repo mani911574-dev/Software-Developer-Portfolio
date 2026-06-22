@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionTemplate, useScroll, useSpring, useTransform } from "framer-motion";
-import finalCv from "./assets/finalcv.pdf";
+import Manicv from "./assets/Manicv.pdf";
 import portfolioPhoto from "./assets/newimage.png";
 import cropDisease1 from "./Images/cropdisease.jpeg";
 import cropDisease2 from "./Images/cropdisease2.jpeg";
@@ -273,7 +273,7 @@ function Navbar() {
         </nav>
 
         <a
-          href={finalCv}
+          href={Manicv}
           download="Usman-Rasheed-CV.pdf"
           className="hidden items-center gap-2 rounded-full bg-mint px-5 py-2 text-sm font-black text-white transition hover:scale-105 lg:flex"
         >
@@ -312,7 +312,7 @@ function Navbar() {
               </a>
             ))}
             <a
-              href={finalCv}
+              href={Manicv}
               download="Usman-Rasheed-CV.pdf"
               onClick={() => setOpen(false)}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-mint px-4 py-3 font-black text-white"
@@ -370,7 +370,7 @@ function Hero() {
               Contact Us
             </motion.a>
             <motion.a
-              href={finalCv}
+              href={Manicv}
               download="Usman-Rasheed-CV.pdf"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-mint/40 px-6 py-3 font-black text-mint transition hover:bg-purple-50 lg:hidden"
               whileHover={{ scale: 1.04 }}
