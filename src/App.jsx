@@ -393,7 +393,7 @@ function Hero() {
           <img
             src={portfolioPhoto}
             alt="Professional developer portrait"
-            className="absolute bottom-0 left-1/2 h-[28rem] w-[19rem] -translate-x-1/2 rounded-t-[12rem] object-cover grayscale sm:h-[32rem] sm:w-[22rem] lg:h-[34rem] lg:w-[24rem]"
+            className="absolute bottom-0 left-1/2 h-[28rem] w-[19rem] -translate-x-1/2 object-cover sm:h-[32rem] sm:w-[22rem] lg:h-[34rem] lg:w-[24rem]"
           />
         </motion.div>
       </div>
